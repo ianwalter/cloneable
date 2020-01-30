@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`array 1`] = `
+Array [
+  Object {
+    "title": "Bury Us",
+    "updates": Array [
+      Object {
+        "timestamp": 2020-01-30T18:07:39.444Z,
+      },
+      Object {
+        "timestamp": 2020-01-30T18:07:39.444Z,
+      },
+    ],
+  },
+  Array [
+    Object {
+      "regex": Object {},
+      "results": Array [
+        Object {
+          "otherActions": Array [],
+          "title": "Stay Forever",
+        },
+      ],
+    },
+  ],
+]
+`;
+
+exports[`cloneable 1`] = `
+Object {
+  "message": "Hello!",
+  "song": Object {
+    "index": 3,
+  },
+}
+`;
+
+exports[`object 1`] = `
+Object {
+  "message": "Hello!",
+  "song": Object {
+    "index": 3,
+  },
+}
+`;
