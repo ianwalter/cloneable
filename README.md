@@ -1,12 +1,15 @@
 # @ianwalter/cloneable
 > Create a clone of an object that is accepted by the Structured Clone Algorithm
 
+[![npm page][npmImage]][npmUrl]
+[![CI][ciImage]][ciUrl]
+
 ## About
 
 ## Installation
 
 ```console
-yarn add @ianwalter/nrg
+yarn add @ianwalter/cloneable
 ```
 
 ## License
