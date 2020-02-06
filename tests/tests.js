@@ -9,26 +9,24 @@ test('object', ({ expect }) => {
     },
     song: {
       index: 3,
+      date: new Date(),
       getLyrics () {
         return 'Darling its bout time to break free of'
       }
     }
   }
-  expect(cloneable(thing)).toMatchSnapshot()
+  expect(cloneable(thing)).toMatchSnapshot({
+    song: {
+      date: expect.any(Date)
+    }
+  })
 })
 
 test('array', ({ expect }) => {
   const thing = [
     {
       title: 'Bury Us',
-      updates: [
-        {
-          timestamp: new Date()
-        },
-        {
-          timestamp: new Date()
-        }
-      ]
+      updates: [9, 10]
     },
     [
       {
