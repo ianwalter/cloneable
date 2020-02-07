@@ -26,7 +26,7 @@ function reduce (src) {
     )
   } else {
     const dest = {}
-    for (const key in src) {
+    for (const key of Object.getOwnPropertyNames(src)) {
       try {
         dest[key] = cloneable(src[key])
       } catch (err) {

@@ -11,7 +11,9 @@ Array [
   },
   Array [
     Object {
-      "regex": Object {},
+      "regex": Object {
+        "lastIndex": 0,
+      },
       "results": Array [
         Object {
           "otherActions": Array [],
