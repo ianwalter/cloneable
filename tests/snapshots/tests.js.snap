@@ -25,17 +25,12 @@ Array [
 ]
 `;
 
-exports[`cloneable 1`] = `
-Object {
-  "message": "Hello!",
-  "song": Object {
-    "index": 3,
-  },
-}
-`;
-
 exports[`object 1`] = `
 Object {
+  "err": Object {
+    "message": "Scratch that",
+    "stack": StringContaining "Error: Scratch that",
+  },
   "message": "Hello!",
   "song": Object {
     "date": Any<Date>,

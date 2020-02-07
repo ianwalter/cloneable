@@ -4,6 +4,7 @@ const cloneable = require('..')
 test('object', ({ expect }) => {
   const thing = {
     message: 'Hello!',
+    err: new Error('Scratch that'),
     yellMessage () {
       return this.message.toUpperCase()
     },
@@ -16,6 +17,9 @@ test('object', ({ expect }) => {
     }
   }
   expect(cloneable(thing)).toMatchSnapshot({
+    err: {
+      stack: expect.stringContaining('Error: Scratch that')
+    },
     song: {
       date: expect.any(Date)
     }
