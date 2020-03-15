@@ -1,4 +1,6 @@
+const v8 = require('v8')
 const { test } = require('@ianwalter/bff')
+const { requester } = require('@ianwalter/requester')
 const cloneable = require('..')
 
 test('object', ({ expect }) => {
@@ -53,4 +55,19 @@ test('array', ({ expect }) => {
     ]
   ]
   expect(cloneable(thing)).toMatchSnapshot()
+})
+
+test('serialize', async t => {
+  try {
+    await requester.get('http://httpstat.us/401')
+  } catch (err) {
+    const msg = cloneable(err)
+    t.expect(v8.deserialize(v8.serialize(msg))).toMatchSnapshot({
+      stack: t.expect.any(String),
+      response: {
+        headers: t.expect.any(Object),
+        rawHeaders: t.expect.any(Array)
+      }
+    })
+  }
 })
